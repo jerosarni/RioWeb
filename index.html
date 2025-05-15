@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rio Club</title>
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+    <body>
+
+        <!-- Banner -->
+        <section id="banner">  
+        <div class="banner">
+            <img src="images/RIO-04.png" alt="RIO Club Logo" class="logo">
+            <div class="banner-content">
+            <h1>Join the club!</h1>
+            <div class="buttons">
+                <button type="button" class="btn" onclick="openLoginPopup()">&nbsp Log in &nbsp</button>
+                <button class="btn" onclick="window.location.href='form.html'">&nbsp Join &nbsp</button>
+            </div>
+            </div>
+        </div>
+        </section>
+    
+        <!-- About Section -->
+			
+        <!-- <section class="about-section">
+          <div class="about-overlay"></div>
+          <div class="about-content">
+            <img src="images/RIO-06.png" alt="RIO Logo" class="about-logo">
+            <div class="about-text">
+              <p>We are a football-focused agency.<br>
+              We connect brands with the emotion and impact of football through memorable campaigns, events, and strategies.<br>
+              With a global perspective based in Miami and Argentina's top creative football talent, we deliver authentic and powerful work.</p>
+            </div>
+          </div>
+        </section> -->
+
+        <!-- Login Popup -->
+        <div id="login-popup" class="popup-overlay" style="display:none;">
+          <div class="popup-content">
+            <span class="close-btn" onclick="closeLoginPopup()">&times;</span>
+            <h2>Log in</h2>
+            <form onsubmit="doLogin(event)">
+              <input type="text" id="email" placeholder="Username or Email" required>
+              <input type="password" id="password" placeholder="Password" required>
+              <button type="submit" class="form-btn">Log in</button>
+            </form>
+          </div>
+        </div>
+
+       <!-- Firebase App (core) -->
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+        <!-- Firebase Auth -->
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+        <script src="assets/js/index.js"></script>
+
+    </body>
+</html>

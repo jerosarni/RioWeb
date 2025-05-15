@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #022456;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container h1 {
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 400;
+  margin-bottom: 100px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 1200px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-row {
+  width: 100%;
+  display: flex;
+  gap: 2vw;
+  margin-bottom: 32px;
+}
+
+input[type="text"],
+input[type="email"] {
+  flex: 1;
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  border: 1px solid #3a4a6a;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: #b0bed0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #FF4D6D;
+}
+
+.form-btn {
+  background: #FF4D6D;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 18px 60px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.form-btn:hover {
+  background: #d13b65;
+}
+
+@media (max-width: 900px) {
+  .form-container h1 {
+    font-size: 5vw;
+  }
+  form {
+    width: 90vw;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+#message {
+  color: #fff;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+} 
