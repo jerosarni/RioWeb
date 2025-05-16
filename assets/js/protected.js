@@ -30,3 +30,31 @@ document.getElementById('logoutBtn')
       window.location.href = 'index.html';
     });
   });
+
+
+
+document.querySelectorAll('.campaign-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const videoUrl = this.getAttribute('data-video') + "?autoplay=1";
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('modalVideo');
+    iframe.src = videoUrl;
+    modal.style.display = 'flex';
+  });
+});
+
+document.querySelector('.modal .close').onclick = function() {
+  const modal = document.getElementById('videoModal');
+  const iframe = document.getElementById('modalVideo');
+  iframe.src = "";
+  modal.style.display = 'none';
+};
+
+window.onclick = function(event) {
+  const modal = document.getElementById('videoModal');
+  if (event.target == modal) {
+    const iframe = document.getElementById('modalVideo');
+    iframe.src = "";
+    modal.style.display = 'none';
+  }
+};

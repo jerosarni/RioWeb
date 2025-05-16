@@ -36,11 +36,79 @@
           </div>
         </section>
 
+
+        <section id="campaigns" class="campaigns-section">
+          <h2 class="campaigns-title">CAMPAIGNS</h2>
+          <div class="campaigns-grid">
+            <div class="campaign-card" data-video="https://www.youtube.com/embed/lgD8KfOd-mw">
+              <img src="images/papa.png" alt="AFA – Farewell to Pope Francis">
+              <p>AFA – Farewell to Pope Francis</p>
+            </div>
+            <div class="campaign-card" data-video="https://www.youtube.com/embed/JvOX5a_GM0g">
+              <img src="images/scaloni.png" alt="Banco Macro – Institutional Campaign">
+              <p>Banco Macro – Institutional Campaign</p>
+            </div>
+            <div class="campaign-card" data-video="https://www.youtube.com/embed/PjGfHIUuOvA">
+              <img src="images/direct.png" alt="DirecTV – Copa América">
+              <p>DirecTV – Copa América</p>
+            </div>
+            <div class="campaign-card" data-video="https://www.youtube.com/embed/AqGz8-jXWFI">
+              <img src="images/river.png" alt="River Plate – Brand Internationalization Plan in the U.S.">
+              <p>River Plate – Brand Internationalization Plan in the U.S.</p>
+            </div>
+            <div class="campaign-card" data-video="https://www.youtube.com/embed/mYS435vg55g">
+              <img src="images/conmebol.png" alt="CONMEBOL – The First Ones">
+              <p>CONMEBOL – The First Ones</p>
+            </div>
+            <div class="campaign-card" data-video="https://www.youtube.com/embed/FA1sR2SZAlY">
+              <img src="images/qatar.png" alt="Qatar – WC 2022">
+              <p>Qatar – WC 2022</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal for video -->
+        <div id="videoModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="modalVideo" width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
     
 
     
         <!-- Firebase & Auth -->
     <script type="module" src="assets/js/protected.js"></script>
+    <script src="assets/js/form.js"></script>
+
+    <script>
+      // Modal video logic
+      document.querySelectorAll('.campaign-card').forEach(card => {
+        card.addEventListener('click', function() {
+          const videoUrl = this.getAttribute('data-video') + "?autoplay=1";
+          const modal = document.getElementById('videoModal');
+          const iframe = document.getElementById('modalVideo');
+          iframe.src = videoUrl;
+          modal.style.display = 'flex';
+        });
+      });
+
+      document.querySelector('.modal .close').onclick = function() {
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('modalVideo');
+        iframe.src = "";
+        modal.style.display = 'none';
+      };
+
+      window.onclick = function(event) {
+        const modal = document.getElementById('videoModal');
+        if (event.target == modal) {
+          const iframe = document.getElementById('modalVideo');
+          iframe.src = "";
+          modal.style.display = 'none';
+        }
+      };
+    </script>
 
     </body>
 </html>
