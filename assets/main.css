@@ -54,7 +54,7 @@ body {
     width: 600px;
     margin-right: 0;
     margin-bottom: 70px;
-    margin-left: -55px;
+    margin-left: -70px;
   }
   .banner {
     flex-direction: column;
@@ -81,7 +81,7 @@ body {
     width: 300px;
     margin-right: 0;
     margin-bottom: 32px;
-    margin-left: -50px;
+    margin-left: -70px;
   }
   .banner {
     flex-direction: column;
