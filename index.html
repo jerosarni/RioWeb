@@ -2,61 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rio Club — Football-focused agency connecting brands with the emotion of football.">
   <title>Rio Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/main.css">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 </head>
-    <body>
+<body>
 
-        <!-- Banner -->
-        <section id="banner">  
-        <div class="banner">
-            <img src="images/RIO-04.png" alt="RIO Club Logo" class="logo">
-            <div class="banner-content">
-            <h1>Join the club!</h1>
-            <div class="buttons">
-                <button type="button" class="btn" onclick="openLoginPopup()">&nbsp Log in &nbsp</button>
-                <button class="btn" onclick="window.location.href='form.html'">&nbsp Join &nbsp</button>
-            </div>
-            </div>
-        </div>
-        </section>
-    
-        <!-- About Section -->
-			
-        <!-- <section class="about-section">
-          <div class="about-overlay"></div>
-          <div class="about-content">
-            <img src="images/RIO-06.png" alt="RIO Logo" class="about-logo">
-            <div class="about-text">
-              <p>We are a football-focused agency.<br>
-              We connect brands with the emotion and impact of football through memorable campaigns, events, and strategies.<br>
-              With a global perspective based in Miami and Argentina's top creative football talent, we deliver authentic and powerful work.</p>
-            </div>
-          </div>
-        </section> -->
+  <!-- ───── NAVBAR ───── -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo-link">
+      <img src="images/RIO-04.png" alt="Rio Club" class="nav-logo">
+    </a>
 
-        <!-- Login Popup -->
-        <div id="login-popup" class="popup-overlay" style="display:none;">
-          <div class="popup-content">
-            <span class="close-btn" onclick="closeLoginPopup()">&times;</span>
-            <h2>Log in</h2>
-            <form onsubmit="doLogin(event)">
-              <input type="text" id="email" placeholder="Username" required>
-              <input type="password" id="password" placeholder="Password" required>
-              <button type="submit" class="form-btn">Log in</button>
-            </form>
-          </div>
-        </div>
+    <div class="nav-menu" id="navMenu">
+      <a href="#about"     class="nav-link" data-i18n="nav.about">About</a>
+      <a href="#campaigns" class="nav-link" data-i18n="nav.campaigns">Campaigns</a>
+      <a href="#game-plan" class="nav-link" data-i18n="nav.gamePlan">Game Plan</a>
+      <a href="#members"   class="nav-link" data-i18n="nav.members">Members</a>
+    </div>
 
-       <!-- Firebase App (core) -->
-        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-        <!-- Firebase Auth -->
-        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-        <script src="assets/js/index.js"></script>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-    </body>
+  <!-- ───── HERO ───── -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <img src="images/RIO-04.png" alt="Rio Club Logo" class="hero-logo">
+      <p class="hero-tagline" data-i18n="hero.tagline"></p>
+    </div>
+    <a class="scroll-arrow" href="#about" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ───── ABOUT ───── -->
+  <section id="about" class="about">
+    <div class="about-overlay"></div>
+    <div class="about-inner">
+      <img src="images/RIO-06.png" alt="Rio Logo" class="about-logo">
+      <p class="about-text" data-i18n="about.text"></p>
+    </div>
+    <a class="scroll-arrow" href="#campaigns" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ───── CAMPAIGNS ───── -->
+  <section id="campaigns" class="campaigns">
+    <h2 class="section-title" data-i18n="campaigns.title"></h2>
+    <div class="campaigns-grid" id="campaignsGrid"></div>
+    <a class="scroll-arrow" href="#game-plan" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- VIDEO MODAL -->
+  <div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-label="Video">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <iframe id="modalIframe" src="" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen title="Campaign video" loading="lazy"
+        sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"
+        style="display:none"></iframe>
+      <video id="modalVideo" controls style="display:none">
+        <source id="modalVideoSrc" src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- ───── GAME PLAN ───── -->
+  <section id="game-plan" class="game-plan">
+    <div class="game-plan-bg"></div>
+    <div class="game-plan-overlay"></div>
+    <div class="game-plan-inner">
+      <h2 class="section-title" data-i18n="gamePlan.title"></h2>
+      <p class="section-subtitle" data-i18n="gamePlan.subtitle"></p>
+      <ol class="game-plan-list" id="gamePlanList"></ol>
+    </div>
+    <a class="scroll-arrow" href="#members" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ───── MEMBERS ───── -->
+  <section id="members" class="members">
+    <div class="members-inner">
+      <h2 class="section-title" data-i18n="members.title"></h2>
+      <p class="section-subtitle" data-i18n="members.subtitle"></p>
+      <div class="members-grid" id="membersGrid"></div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="footer">
+    <img src="images/RIO-04.png" alt="Rio Club" class="footer-logo">
+    <p class="footer-copy">&copy; <span id="year"></span> Rio Club. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
