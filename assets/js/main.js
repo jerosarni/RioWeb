@@ -26,7 +26,7 @@ const translations = {
         'DirecTV – Copa América',
         'River Plate',
         'CONMEBOL – The First Ones',
-        'Qatar – WC 2022',
+        'We Human AI',
       ],
     },
     gamePlan: {
@@ -72,7 +72,7 @@ const translations = {
         'DirecTV – Copa América',
         'River Plate',
         'CONMEBOL – Los Primeros',
-        'Qatar – Mundial 2022',
+        'We Human AI',
       ],
     },
     gamePlan: {
@@ -105,7 +105,7 @@ const campaignsData = [
   { key: 2, img: 'images/direct.png',   video: 'https://www.youtube.com/embed/PjGfHIUuOvA' },
   { key: 3, img: 'images/river.png',    video: 'images/videoriver.MOV' },
   { key: 4, img: 'images/conmebol.png', video: 'https://www.youtube.com/embed/mYS435vg55g' },
-  { key: 5, img: 'images/qatar.png',    video: 'https://www.youtube.com/embed/FA1sR2SZAlY' },
+  { key: 5, img: 'images/qatar.png',    video: 'https://www.youtube.com/embed/xqXH_TL57PE' },
 ];
 
 /* ── Members data ── */
@@ -117,7 +117,9 @@ const membersData = [
       { src: 'images/3.png',        alt: 'Zacharial' },
       { src: 'images/4.png',        alt: 'Macro' },
       { src: 'images/5.png',        alt: 'Heineken' },
-      { src: 'images/logococa.png', alt: 'Coca-Cola' },
+      { src: 'images/logococa.png',  alt: 'Coca-Cola' },
+      { src: 'images/bankaool.png', alt: 'Bankaool' },
+      { src: 'images/notcologo.png', alt: 'Notco' },
     ],
   },
   {
