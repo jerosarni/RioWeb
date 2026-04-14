@@ -183,7 +183,7 @@ ol, ul { list-style: none; }
   width: 420px;
   max-width: 80vw;
   margin-bottom: 28px;
-  transform: translateX(-40px);
+  transform: translateX(-25px);
 }
 
 .hero-tagline {
