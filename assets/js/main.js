@@ -26,7 +26,7 @@ const translations = {
         'DirecTV – Copa América',
         'River Plate',
         'CONMEBOL – The First Ones',
-        'We Human AI',
+        'WeHumanHub AI',
       ],
     },
     gamePlan: {
@@ -72,7 +72,7 @@ const translations = {
         'DirecTV – Copa América',
         'River Plate',
         'CONMEBOL – Los Primeros',
-        'We Human AI',
+        'WeHumanHub AI',
       ],
     },
     gamePlan: {
@@ -103,7 +103,7 @@ const campaignsData = [
   { key: 0, img: 'images/papa.png',     video: 'https://www.youtube.com/embed/lgD8KfOd-mw' },
   { key: 1, img: 'images/scaloni.png',  video: 'https://www.youtube.com/embed/JvOX5a_GM0g' },
   { key: 2, img: 'images/direct.png',   video: 'https://www.youtube.com/embed/PjGfHIUuOvA' },
-  { key: 3, img: 'images/river.png',    video: 'images/videoriver.MOV' },
+  { key: 3, img: 'images/river.png',    video: 'https://www.youtube.com/embed/Zc0EYC7rrro' },
   { key: 4, img: 'images/conmebol.png', video: 'https://www.youtube.com/embed/mYS435vg55g' },
   { key: 5, img: 'images/qatar.png',    video: 'https://www.youtube.com/embed/xqXH_TL57PE' },
 ];
