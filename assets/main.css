@@ -183,6 +183,7 @@ ol, ul { list-style: none; }
   width: 420px;
   max-width: 80vw;
   margin-bottom: 28px;
+  transform: translateX(-40px);
 }
 
 .hero-tagline {
@@ -711,7 +712,7 @@ ol, ul { list-style: none; }
   .nav-logo   { height: 30px; }
   .navbar     { padding: 0 18px; }
 
-  .hero-logo  { width: 260px; }
+  .hero-logo  { width: 260px; transform: none; }
   .hero-tagline { font-size: 0.85rem; letter-spacing: 0.2em; }
 
   .about { min-height: unset; }
