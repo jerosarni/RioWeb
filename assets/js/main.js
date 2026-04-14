@@ -13,7 +13,7 @@ const translations = {
       members:   'Members',
     },
     hero: {
-      tagline: 'Football-focused agency',
+      tagline: '',
     },
     about: {
       text: 'We are a football-focused agency. We connect brands with the emotion and impact of football through memorable real-time campaigns, events, and strategies. With a global perspective based in Miami and Argentina\'s top creative football talent, we deliver authentic and powerful work.',
@@ -59,7 +59,7 @@ const translations = {
       members:   'Miembros',
     },
     hero: {
-      tagline: 'Agencia enfocada en el fútbol',
+      tagline: '',
     },
     about: {
       text: 'Somos una agencia enfocada en el fútbol. Conectamos marcas con la emoción e impacto del fútbol a través de campañas memorables en tiempo real, eventos y estrategias. Con una perspectiva global desde Miami y el mejor talento creativo del fútbol argentino, entregamos trabajo auténtico y poderoso.',
