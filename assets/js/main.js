@@ -31,7 +31,7 @@ const translations = {
     },
     gamePlan: {
       title:    'Game Plan',
-      subtitle: 'We know the strategies to play every match — on and off the field.',
+      subtitle: 'We know the strategies to play every match, on and off the field.',
       items: [
         { title: 'Integrated Campaigns',          desc: 'We build strong communication platforms that bring to life scalable campaigns with real power to connect.' },
         { title: 'Sports Sponsorship Strategy',   desc: 'We connect brands with clubs, leagues, and events to create meaningful partnerships.' },
@@ -113,10 +113,11 @@ const membersData = [
   {
     groupKey: 'globalBrands',
     logos: [
-      { src: 'images/2.png', alt: 'DIRECTV',   style: 'height:60px;max-width:150px' },
-      { src: 'images/3.png', alt: 'Zacharial' },
-      { src: 'images/4.png', alt: 'Macro' },
-      { src: 'images/5.png', alt: 'Heineken' },
+      { src: 'images/2.png',        alt: 'DIRECTV',    style: 'height:60px;max-width:150px' },
+      { src: 'images/3.png',        alt: 'Zacharial' },
+      { src: 'images/4.png',        alt: 'Macro' },
+      { src: 'images/5.png',        alt: 'Heineken' },
+      { src: 'images/logococa.png', alt: 'Coca-Cola' },
     ],
   },
   {
